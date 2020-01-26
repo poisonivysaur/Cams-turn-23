@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>Cams Turn 22</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -13,6 +14,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
 <body>
+  
+<!--  PLEASE REFER TO https://www.w3schools.com/colors/colors_w3css.asp FOR THE COLOR SCHEME RAINBOW PER YEAR  -->
 
 <!-- Navbar --><!--
 <div class="w3-top">
@@ -37,7 +40,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Header -->
 <header class="w3-container w3-teal w3-text-white w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">HAPPY 23<sup>rd</sup> BIRTHDAY CAMS!!!</h1>
-  <p class="w3-xlarge">Hope you have a nice day :)</p>
+  <p class="w3-xlarge">Turn up the volume :3</p>
   <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
 </header>
 
@@ -47,7 +50,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div class="w3-twothird">
     <p class="w3-text-grey">January 28, 2020</p>
       <h1>Catching Up...</h1>
-      <h5 class="w3-padding-32">So this is my first time writing an "electronic" birthday card (Github recently introduced last January 7 free unlimited private repositories as a way to start the new year to which this site is hosted privately)! The source code for this page is private in one of my Github repositories, meaning as of now only I know about this page and since I have shared the url link with you--that makes this webpage only known by you and me :3</h5>
+      <h5 class="w3-padding-32">So this is my second time writing an "electronic" birthday card (Github recently introduced last January 7 free unlimited private repositories as a way to start the new year to which this site is hosted privately)! The source code for this page is private in one of my Github repositories, meaning as of now only I know about this page and since I have shared the url link with you--that makes this webpage only known by you and me :3</h5>
 
       <p class="w3-text-grey">I decided this idea of hosting my letter in a website only you can see instead of private messages or hard copy letters so that you can easily access just the link anywhere with you if you have Internet connection without needing to login to anything xD ahihihihi hope you like it ❤️ Ok so I guess here's the start of the letter...</p>
       <p class="w3-text-grey">First of all HAPPY BIRTHDAY to my bestest friend in the entire universe!!! I wished I could have joined you last December with BS group, but many things have happened during the past few months that it took me quite some time to grasp everything and bounce back to myself. I did not felt Christmas at all for the very first time last 2018. It was because of my Angkong passed away, and everything after that was in a melancholic rhythm. I guess I was pretty down and heartbroken when my Angkong passed away, and I guess I finally felt what you felt way back in 2nd year when your Ama passed away 😢. Everyday felt like there was a nail pierced into my heart ever since the news that my Angkong was hospitalized came late November (The Sunday morning of Nov. 25, 2018). Ever since then I stopped going to church. When I went to hk for the wake, the aura was so gloomy and night after night I kept welling up tears to sleep. I guess I'm having those times in life wherein every ounce of life just got sucked out of you and you just feel dead inside. Those days I really hit bottom hard and I just thought to myself I wish I wouldn't wake up another day. I couldn't stop myself from shedding tears when I reminisce fresh memories of the times I spent with my Angkong. It was only last 2017 when I traveled alone to hk with my Angkong for the first time and spent precious memories--and they were the last. I can say that I stopped crying at night exactly a month after my Angkong joined with the Lord. I guess the most painful memories are the last few days talking with Angkong via phone call as since he was hospitalized in hk and I can't miss out on my thesis I defense and final exams. I really felt bitter during the last days of that cruel term. My apologies I think I have ranted too much and this is supposed to be a birthday greeting 😂😂😂 </p>
@@ -55,7 +58,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
 
     <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-lime"></i>
+      <i class="fa fa-anchor w3-padding-64 w3-text-teal"></i>
     </div>
   </div>
 </div>
@@ -78,7 +81,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">"Every good and perfect gift is from above, coming down from the Father of the heavenly lights, who does not change like shifting shadows. He chose to give us birth through the word of truth, that we might be a kind of firstfruits of all he created." - James 1:17-18 NIV</h1>
+    <h1 class="w3-margin w3-xlarge">"For through wisdom your days will be many, and years will be added to your life." - Proverbs 9:11 NIV</h1>
 </div>
 
 <!-- Footer -->
@@ -93,6 +96,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
  </div>-->
  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
-
+<script>
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+    this.sound.play();
+  }
+  this.stop = function(){
+    this.sound.pause();
+  }
+}
+$(document).ready(function(){
+  mySound = new sound("assets/happy-birthday-edm.mp3");
+  mySound.play();
+});
+</script>
 </body>
 </html>
