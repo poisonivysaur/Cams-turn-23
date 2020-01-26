@@ -21,8 +21,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Header -->
 <header class="w3-container w3-teal w3-text-white w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">HAPPY 23<sup>rd</sup> BIRTHDAY CAMS!!!</h1>
+  <button id="btnMusic" class="w3-button w3-white w3-padding-large w3-large w3-margin-top">Click me!</button>
   <p class="w3-xlarge">Turn up the volume :3</p>
-  <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
 </header>
 
 <!-- First Grid -->
@@ -104,9 +104,12 @@ function sound(src) {
     this.sound.pause();
   }
 }
-$(document).ready(function(){
+function playMusic(){
   mySound = new sound("https://cdn.glitch.com/403964f8-0a04-4af0-a729-18787b6e19ad%2Fhappy-birthday-edm.mp3");
   mySound.play();
+}
+$(document).ready(function(){
+  document.getElementById("btnMusic").addEventListener("click", (playMusic));
   
 });
 </script>
